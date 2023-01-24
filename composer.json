@@ -41,8 +41,7 @@
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            "infection/extension-installer": true,
-            "foxy/foxy": true
+            "infection/extension-installer": true
         }
     }
 }
