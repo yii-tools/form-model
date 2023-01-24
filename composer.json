@@ -1,0 +1,48 @@
+{
+    "name": "yii-tools/form-model",
+    "type": "library",
+    "description": "Form model for Yii 3",
+    "keywords": [
+        "yii",
+        "awesome",
+        "form-model"
+    ],
+    "license": "mit",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.1",
+        "ext-mbstring": "*",
+        "yii-tools/model": "^1.0@dev",
+        "yiisoft/arrays": "^2.0",
+        "yiisoft/strings": "^2.1"
+    },
+    "require-dev": {
+        "maglnet/composer-require-checker": "^4.3",
+        "phpunit/phpunit": "^9.5",
+        "roave/infection-static-analysis-plugin": "^1.28",
+        "vimeo/psalm": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yii\\FormModel\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yii\\FormModel\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.0.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "infection/extension-installer": true,
+            "foxy/foxy": true
+        }
+    }
+}
