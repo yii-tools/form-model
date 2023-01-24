@@ -35,7 +35,7 @@ abstract class AbstractFormModel extends AbstractModel
      *
      * @return string The error message. Empty string is returned if there is no error.
      */
-    public function getFirstError(string $attribute): string|null
+    public function getFirstError(string $attribute): string
     {
         return $this->formModelError->getFirst($attribute);
     }
