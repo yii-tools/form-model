@@ -6,6 +6,12 @@
     <br>
 </p>
 
+## Requirements
+
+The minimun version of PHP required by this package is PHP 8.1.
+
+For install this package, you need [composer](https://getcomposer.org/) and `mbstring` extension for PHP.
+
 ## Install
 
 ```shell
