@@ -1,5 +1,5 @@
 <p align="center">
-    <a href="https://github.com/yii-tools/filament" target="_blank">
+    <a href="https://github.com/yii-tools/form-model" target="_blank">
         <img src="https://avatars.githubusercontent.com/u/121752654?s=200&v=4" height="100px">
     </a>
     <h1 align="center">Awesome FormModel for YiiFramework v. 3.0.</h1>
