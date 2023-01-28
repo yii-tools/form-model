@@ -1,11 +1,12 @@
 {
     "name": "yii-tools/form-model",
     "type": "library",
-    "description": "Form model for Yii 3",
+    "description": "Awesome FormModel for YiiFramework v. 3.0.",
     "keywords": [
         "yii",
         "awesome",
-        "form-model"
+        "form-model",
+        "yii3"
     ],
     "license": "mit",
     "minimum-stability": "dev",
