@@ -3,8 +3,8 @@
     "type": "library",
     "description": "Awesome FormModel for YiiFramework v. 3.0.",
     "keywords": [
-        "yii",
-        "awesome",
+        "yii-tools",
+        "awsome",
         "form-model",
         "yii3"
     ],
@@ -43,5 +43,11 @@
         "allow-plugins": {
             "infection/extension-installer": true
         }
+    },
+    "scripts": {
+        "check-dependencies": "composer-require-checker",
+        "mutation": "roave-infection-static-analysis-plugin",
+        "psalm": "psalm",
+        "test": "phpunit"
     }
 }

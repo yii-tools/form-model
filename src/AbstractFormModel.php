@@ -11,7 +11,7 @@ use Yiisoft\Strings\StringHelper;
 
 use function array_key_exists;
 
-abstract class AbstractFormModel extends AbstractModel
+abstract class AbstractFormModel extends AbstractModel implements FormModelInterface
 {
     private FormModelError $formModelError;
 
@@ -30,21 +30,11 @@ abstract class AbstractFormModel extends AbstractModel
         return $this->formModelError;
     }
 
-    /**
-     * @param string $attribute The attribute name.
-     *
-     * @return string The error message. Empty string is returned if there is no error.
-     */
     public function getFirstError(string $attribute): string
     {
         return $this->formModelError->getFirst($attribute);
     }
 
-    /**
-     * @param string $attribute The attribute name.
-     *
-     * @return string The text hint for the specified attribute.
-     */
     public function getHint(string $attribute): string
     {
         $nestedHint = $this->getNestedValue('getHint', $attribute);
@@ -71,10 +61,6 @@ abstract class AbstractFormModel extends AbstractModel
         return [];
     }
 
-    /**
-     * @return string The label for the specified attribute. If the attribute does not have a label, a label is
-     * generated using {@see generateLabel()}.
-     */
     public function getLabel(string $attribute): string
     {
         $nestedLabel = $this->getNestedValue('getLabel', $attribute);
@@ -100,11 +86,6 @@ abstract class AbstractFormModel extends AbstractModel
         return [];
     }
 
-    /**
-     * @param string $attribute The attribute name.
-     *
-     * @return string The text placeholder for the specified attribute.
-     */
     public function getPlaceholder(string $attribute): string
     {
         $nestedPlaceholder = $this->getNestedValue('getPlaceholder', $attribute);
@@ -131,15 +112,6 @@ abstract class AbstractFormModel extends AbstractModel
         return [];
     }
 
-    /**
-     * Wheather the form model has errors for the specified attribute, or any attribute if the attribute name is not
-     * specified.
-     *
-     * @param string|null $attribute The attribute name.
-     *
-     * @return bool Wheather the form model has errors for the specified attribute, or any attribute if the attribute
-     * name is not specified.
-     */
     public function hasError(string $attribute = null): bool
     {
         return $this->formModelError->has($attribute);
