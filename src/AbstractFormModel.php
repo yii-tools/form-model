@@ -112,6 +112,11 @@ abstract class AbstractFormModel extends AbstractModel implements FormModelInter
         return [];
     }
 
+    public function getRuleOptionsAttribute(string $attribute): array
+    {
+        return [];
+    }
+
     public function hasError(string $attribute = null): bool
     {
         return $this->formModelError->has($attribute);
