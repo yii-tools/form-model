@@ -24,6 +24,15 @@ interface FormModelInterface
     /**
      * @param string $attribute The attribute name.
      *
+     * @return array The errors for an attribute with a given name.
+     *
+     * @psalm-return string[]
+     */
+    public function getError(string $attribute): array;
+
+    /**
+     * @param string $attribute The attribute name.
+     *
      * @return string The error message. Empty string is returned if there is no error.
      */
     public function getFirstError(string $attribute): string;

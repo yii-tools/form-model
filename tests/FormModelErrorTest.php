@@ -106,13 +106,6 @@ final class FormModelErrorTest extends TestCase
         );
     }
 
-    public function testGetFirstError(): void
-    {
-        $formModel = new BasicForm();
-
-        $this->assertSame('', $formModel->getFirstError('username'));
-    }
-
     public function testGetFirstsErrorWithEmpty(): void
     {
         $formModel = new BasicForm();
