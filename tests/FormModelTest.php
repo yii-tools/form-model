@@ -21,6 +21,20 @@ final class FormModelTest extends TestCase
         $this->assertSame('Server', $formModel->getLabel('server'));
     }
 
+    public function testGetError(): void
+    {
+        $formModel = new BasicForm();
+
+        $this->assertSame([], $formModel->getError('username'));
+    }
+
+    public function testGetFirstError(): void
+    {
+        $formModel = new BasicForm();
+
+        $this->assertSame('', $formModel->getFirstError('username'));
+    }
+
     public function testGetHint(): void
     {
         $formModel = new BasicForm();

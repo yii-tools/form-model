@@ -30,6 +30,11 @@ abstract class AbstractFormModel extends AbstractModel implements FormModelInter
         return $this->formModelError;
     }
 
+    public function getError(string $attribute): array
+    {
+        return $this->formModelError->get($attribute);
+    }
+
     public function getFirstError(string $attribute): string
     {
         return $this->formModelError->getFirst($attribute);
