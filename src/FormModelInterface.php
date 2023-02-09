@@ -71,11 +71,12 @@ interface FormModelInterface
     public function getPlaceholder(string $attribute): string;
 
     /**
+     * @param self $formModel The form model class name.
      * @param string $attribute The attribute name.
      *
      * @return array The rules valitation for the specified attribute.
      */
-    public function getRuleOptionsAttribute(string $attribute): array;
+    public function getRuleHtmlAttributes(self $formModel, string $attribute): array;
 
     /**
      * If there is such attribute in the set.

@@ -112,7 +112,7 @@ abstract class AbstractFormModel extends AbstractModel implements FormModelInter
         return [];
     }
 
-    public function getRuleOptionsAttribute(string $attribute): array
+    public function getRuleHtmlAttributes(FormModelInterface $formModel, string $attribute): array
     {
         return [];
     }

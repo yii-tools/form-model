@@ -141,10 +141,10 @@ final class FormModelTest extends TestCase
         $formModel->getPlaceholder('noExist');
     }
 
-    public function testGetRuleOptionsAttribute(): void
+    public function testGetRuleHtmlAttributes(): void
     {
         $formModel = new BasicForm();
 
-        $this->assertSame([], $formModel->getRuleOptionsAttribute('amount'));
+        $this->assertSame([], $formModel->getRuleHtmlAttributes($formModel, 'amount'));
     }
 }
