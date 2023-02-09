@@ -145,6 +145,6 @@ final class FormModelTest extends TestCase
     {
         $formModel = new BasicForm();
 
-        $this->assertSame([], $formModel->getRuleOptionsAttribute($formModel, 'amount'));
+        $this->assertSame([], $formModel->getRuleHtmlAttributes($formModel, 'amount'));
     }
 }
